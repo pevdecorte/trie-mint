@@ -1,0 +1,44 @@
+08 Sep 2019:
+Change dashes to underscores in command line arguments.
+
+If there are enough pattern strings (around 2000) and if
+we feed only wildcards, then find_pattern seg faults, probably
+due to insufficient memory.
+
+This is because the trie gets too big.
+
+We should provide a command line option to disable annotations.
+This way the trie nodes will stay small, at the expense of
+less verbose output. A match record would just indicate
+that some pattern was matched, without mentioing the pattern's
+annotation.
+
+
+Make --wildcard_limit a command line flag.
+
+
+23 Jul: Just ran the mm10 data. It took 37 minutes. This
+is the time to beat.
+
+
+Currently, the matcher maintains a linked list of alive sliders.
+When a slider dies, we remove it from the list and deallocate the
+memory it occupies. Each time a new input character is fed
+to the matcher, a new slider is created in a newly allocated
+block of memory.
+
+We could probably save a lot of memory allocations/deallocations
+by maintaining a stack of dead slider objects. Rather than
+creating a new slider at each new character, we simply grab
+an already allocated one off the stack and populate it.
+When a slider dies, we move it to the top of the stack. Moving
+rather than allocating should save time.
+
+
+Implement handling multiple input files, each on a separate
+thread. Currently we build the trie once for each input
+file, and this step is costly. We could save a few
+minutes processing the genome by building the trie just
+once and allowing each thread access to it.
+
+

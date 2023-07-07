@@ -1,0 +1,12 @@
+# find_patterns.cc
+Given a list of strings to match, this program searches for
+matching substrings inside a very large string.
+
+Typical usage:
+
+build/find_patterns \
+    sample_input/mm10-tRNAs.patterns \
+    sample_input/chr19-cut.fa \
+    --range-lower=16 \
+    --range-upper=50
+    >sample_output/chr19.fa.matches

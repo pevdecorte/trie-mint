@@ -1,0 +1,77 @@
+# trie-mint
+Tools for producing tables for the mint pipeline.
+
+
+QUICKSTART
+Input tables for the MINT pipeline can be generated according
+to the following example.
+
+
+# Create a directory for the generated files.
+mkdir gen
+
+# Preprocesses the *.ss into a *.patterns file which will be
+# used by the find_patterns utility.
+python preprocess.py \
+    data/mm10-tRNAs-confidence-set.ss \
+    >gen/mm10-tRNAs.patterns
+
+
+# Runs the naming script to produce the *.names file from
+# the *.ss file.
+python3 naming.py data/mm10-tRNAs-confidence-set.ss \
+       >gen/mm10-tRNAs.names
+
+
+FILE NAMING
+.names
+The .names file is the list of tRNA fragments find_patterns will
+search for in the genome files. Each line starts with a fragment, which
+gets followed by a [tab]. After the [tab] comes a comma-separated list
+of the "type" of fragment (e.g. i-tRF, 5'-tRH, etc.). This data is
+consumed by the Loher pipeline; it is not consumed by the trie-mint pipeline.
+
+.patterns
+The .patterns file contain all the data used by find-patterns to builds its
+trie-based matching structure. Each line contains tRNA sequence; find-patterns
+will try to align substrings of these tRNA sequences to the haystack data. All
+the sequences have had "CCA" appended.
+
+In "unreduced" mode, each line also contains metadata describing the origin
+of the tRNA sequence. The first character is either a '+', '-', or a '!'. The
+first two possibilities mark the tRNA fragment as coming from either the
+positive strand or the negative strand, respectively. Each tRNA also has a
+"virtual" version; the sequence itself is simply the inverse complement of the
+original, and the '+' or '-' is replaced with a '!'. Searching for a fragment
+of a virtual tRNA on the positive strand is equivalent to searching for the
+original on the negative strand, and vice versa. So we use the virtual tRNA
+concept to avoid an unnecessary pass through the negative half of the genome,
+and instead just search for virtual tRNAs on the positive half.
+
+The remainder of the metadata consists of the chromosome on which the tRNA
+is found, its number, and whether it was obtained by the prepending of A, C,
+T, or G.
+
+"Reduced" mode is a hack for reducing the size of the .matches file. In "reduced"
+mode, the first field of the .patterns file is the range of original indices, i.e.
+those which do not come from CCA-addition or [ACTG]-prepending. The range may be
+preceded with a '!', to indicate that the sequence is virtual as described above.
+
+.matches
+This is the file produced by find-patterns. There is one for each haystack
+file (i.e. one for each chromosome). In "unreduced" mode, each line corresponds
+to a match between a tRNA fragment and part of the genome. The first number
+is the index of the match in the haystack file. The second number is the index
+of the match in the tRNA sequence. The last field is the description of the
+tRNA from which the fragment originated.
+
+In "reduced" mode, the first three fields are the same as in "unreduced" mode,
+but the last field is the index range rather than the full tRNA metadata. This
+is enough information to determine whether or not the match occurred inside 
+tRNA space, which is done in postprocessing.
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+Adding strings...
+the
+regal
+rainy
+rainiest
+rain
+in
+spain
+falls
+mainly
+in
+the
+plains
+
+Host string: rainyspNinyNainlythNregalplainsypNain
+About to advance by r; currently we have 0 active sliders.
+After advancing we have 1 active sliders.
+About to advance by a; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by i; currently we have 1 active sliders.
+After advancing we have 2 active sliders.
+About to advance by n; currently we have 2 active sliders.
+After advancing we have 2 active sliders.
+Match found: in at index 2; name: 6
+Match found: in at index 2; name: 10
+Match found: rain at index 0; name: 5
+About to advance by y; currently we have 2 active sliders.
+After advancing we have 1 active sliders.
+Match found: rainy at index 0; name: 3
+About to advance by s; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by p; currently we have 1 active sliders.
+After advancing we have 2 active sliders.
+About to advance by N; currently we have 2 active sliders.
+After advancing we have 9 active sliders.
+About to advance by i; currently we have 9 active sliders.
+After advancing we have 2 active sliders.
+About to advance by n; currently we have 2 active sliders.
+After advancing we have 2 active sliders.
+Match found: in at index 8; name: 6
+Match found: in at index 8; name: 10
+Match found: spain at index 5; name: 7
+About to advance by y; currently we have 2 active sliders.
+After advancing we have 0 active sliders.
+About to advance by N; currently we have 0 active sliders.
+After advancing we have 7 active sliders.
+About to advance by a; currently we have 7 active sliders.
+After advancing we have 3 active sliders.
+About to advance by i; currently we have 3 active sliders.
+After advancing we have 3 active sliders.
+About to advance by n; currently we have 3 active sliders.
+After advancing we have 3 active sliders.
+Match found: in at index 13; name: 6
+Match found: in at index 13; name: 10
+Match found: rain at index 11; name: 5
+About to advance by l; currently we have 3 active sliders.
+After advancing we have 1 active sliders.
+About to advance by y; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+Match found: mainly at index 11; name: 9
+About to advance by t; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by h; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by N; currently we have 1 active sliders.
+After advancing we have 8 active sliders.
+Match found: the at index 17; name: 1
+Match found: the at index 17; name: 11
+About to advance by r; currently we have 8 active sliders.
+After advancing we have 1 active sliders.
+About to advance by e; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by g; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by a; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by l; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+Match found: regal at index 20; name: 2
+About to advance by p; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by l; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by a; currently we have 1 active sliders.
+After advancing we have 1 active sliders.
+About to advance by i; currently we have 1 active sliders.
+After advancing we have 2 active sliders.
+About to advance by n; currently we have 2 active sliders.
+After advancing we have 2 active sliders.
+Match found: in at index 28; name: 6
+Match found: in at index 28; name: 10
+About to advance by s; currently we have 2 active sliders.
+After advancing we have 2 active sliders.
+Match found: plains at index 25; name: 12
+About to advance by y; currently we have 2 active sliders.
+After advancing we have 0 active sliders.
+About to advance by p; currently we have 0 active sliders.
+After advancing we have 1 active sliders.
+About to advance by N; currently we have 1 active sliders.
+After advancing we have 8 active sliders.
+About to advance by a; currently we have 8 active sliders.
+After advancing we have 4 active sliders.
+About to advance by i; currently we have 4 active sliders.
+After advancing we have 4 active sliders.
+About to advance by n; currently we have 4 active sliders.
+After advancing we have 4 active sliders.
+Match found: in at index 35; name: 6
+Match found: in at index 35; name: 10
+Match found: rain at index 33; name: 5

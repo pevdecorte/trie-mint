@@ -1,0 +1,53 @@
+6
+5
+4
+3
+2
+1
+0
+
+Delete everything.
+Now add all the elements back.
+Print all the elements.
+6
+5
+4
+3
+2
+1
+0
+
+Delete 6 and 3.
+6 5 5
+4 4
+3 4
+2 2
+1 1
+0 0
+
+Print all the elements.
+5
+4
+2
+1
+0
+
+Delete 0.
+5 5
+4 4
+2 2
+1 1
+0 1
+
+Print all the elements.
+5
+4
+2
+1
+
+Delete 5.
+
+Print all the elements.
+4
+2
+1

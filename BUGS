@@ -1,0 +1,28 @@
+Migrate to bazel.
+
+Add unit tests.
+
+Check if an inverse complement needs to be taken near the end
+of postprocess.py. (See inline TODO comment.)
+
+Implement multithreading in find_patterns.
+
+Improve memory management in find_patterns.
+
+Convert .fa and .ss files into a common format before running
+the rest of the pipeline. Remove dependence of the pipeline
+on the particular data format.
+
+
+Remove dependancy of unit tests on our particular data files.
+
+Properly handle command line switches.
+
+Use @property everywhere.
+
+Make different sets of scripts of .fa and .ss. (There will probably
+be a third format.) These scripts should contain only business
+logic for reading specific file formats. All other logic
+should be moved into library functions.
+
+Clean up code so that it conforms to style guide.

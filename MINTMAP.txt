@@ -1,0 +1,38 @@
+1) Naming (see figure 1 MintMap paper):
+
+5'tRH: position 0 (-1) to within anticodon region and -1 position of anticodon (from .ss file)[if A1A2A3 is the anticodon triplet and n1n2A1A2A3n3n4 denotes the anticodon loop and the sequence immediately surrounding the triplet, then 5′-tRHs terminate at any of the four underlined positions n1∇n2∇A1∇A2∇A3n3n4 (each ∇ denotes end)]
+0/-1 to n1, n2, A1, or A2
+
+3'tRH: n2, A1, A2 or A3 to any position ion CCA 
+
+5'-tRFs: position 0 to any position except n1, n2, A1, or A2
+
+3'-tRFs: any position except n2, A1, A2 or A3 to any position in CCA
+
+i-tRFs: start after position 0 and end before the first C of CCA addition
+
+
+
+2) Potential tRF sequences: all possible substrings from 16-50 nucleotides long (should only contain ATCG or N (no U)
+
+
+3) Search:
+
+Search for every possible tRF and it's inverse complement (fragments need to be marked with + (original fragment) or - (inverse complement) since tRNAs are encoded on + and - strand of DNA
+
+4) N Matching:
+Matching of N within tRNA sequence - N can be seen as a wild card, matches to ATCG 
+Matching of N within the chromosome - limit number of Ns that are allowed in a row to 3? Maybe this needs fine tuning, maybe we can also check what we did last time, we just want to avoid that tRFs are only matched because there is so many wild cards - we can discuss this
+
+5) Output
+Output should include the genomic position where it was found
+- this needs to be compared to the tRNA space - all genomic positions of the tRNAs (that's what we need + or - for)
+
+Final output table 1 needs to have the fragment sequence /tab Y (if only found in tRNA space) or N (of found outside tRNA space)
+
+Final output table 2 needs to have the fragment sequence /tab tRNA naming from above
+
+Example output:
+    chr1 1234567-123470 + trna557
+    chr1 1234567-123470 - trna557
+

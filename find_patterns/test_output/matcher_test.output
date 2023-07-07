@@ -1,0 +1,33 @@
+Adding strings...
+the
+regal
+rainy
+rainiest
+rain
+in
+spain
+falls
+mainly
+in
+the
+plains
+
+Host string: rainyspainymainlytheregalplainsyplain
+Match found: in at index 2; name: 6; length: 2
+Match found: in at index 2; name: 10; length: 2
+Match found: rain at index 0; name: 5; length: 4
+Match found: rainy at index 0; name: 3; length: 5
+Match found: in at index 8; name: 6; length: 2
+Match found: in at index 8; name: 10; length: 2
+Match found: spain at index 5; name: 7; length: 5
+Match found: in at index 13; name: 6; length: 2
+Match found: in at index 13; name: 10; length: 2
+Match found: mainly at index 11; name: 9; length: 6
+Match found: the at index 17; name: 1; length: 3
+Match found: the at index 17; name: 11; length: 3
+Match found: regal at index 20; name: 2; length: 5
+Match found: in at index 28; name: 6; length: 2
+Match found: in at index 28; name: 10; length: 2
+Match found: plains at index 25; name: 12; length: 6
+Match found: in at index 35; name: 6; length: 2
+Match found: in at index 35; name: 10; length: 2
