@@ -1,6 +1,6 @@
 *.swp
 .idea/
-gen/
+gen/*
 data/
 find_patterns/build/
 __pycache__

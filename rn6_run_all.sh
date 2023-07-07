@@ -25,6 +25,10 @@ cd find_patterns
 make
 cd ..
 
+if [ ! -d gen ]; then
+  mkdir gen
+fi
+
 # Preprocesses chromosome .fa files.
 if [ ! -d gen/${BASEDIR} ]; then
     mkdir gen/${BASEDIR}
