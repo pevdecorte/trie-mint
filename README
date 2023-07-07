@@ -3,12 +3,13 @@ Tools for producing tables for the mint pipeline.
 
 
 QUICKSTART
-Input tables for the MINT pipeline can be generated according
-to the following example.
+
+./rn6_run_all.sh
 
 
-# Create a directory for the generated files.
-mkdir gen
+Input tables for the MINT pipeline are generated according to
+the following steps.
+
 
 # Preprocesses the *.ss into a *.patterns file which will be
 # used by the find_patterns utility.
